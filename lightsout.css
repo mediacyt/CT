@@ -1,5 +1,5 @@
 body {
-    background-image: url("https://s-media-cache-ak0.pinimg.com/originals/9e/0f/40/9e0f40a2190806747addd2971b639347.jpg");
+    background-color: #000000;
 }
 
 .alert-info {
@@ -176,6 +176,13 @@ div#plmeta, ul#queue {
 }
 
 #chatwrap {
+    background: none!important;
+}
+
+#messagebuffer {
+background-color: #000000;
+}
+#videowrap {
     background: none!important;
 }
 
