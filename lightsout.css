@@ -181,14 +181,11 @@ div#plmeta, ul#queue {
 
 #messagebuffer {
 border-color:rgb(0,0,0)!important;
-background-color:transparent!important;
     background-image: linear-gradient(to bottom, 
         rgba(0, 0, 0, 0.1), 
         rgba(0, 0, 0, 0.1));
 }
-#videowrap {
-    background: none!important;
-}
+
 
 #userlist .nick-highlight {
     background-color: rgba(94, 52, 142, 0.6);
