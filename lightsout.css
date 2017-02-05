@@ -19,7 +19,7 @@
 
 
  #userlist {
-    background-color: #222!important;
+    background-color: #000000!important;
     border-bottom: none!important;
 }
 
@@ -116,4 +116,6 @@ div#plmeta, ul#queue {
 #userlist .nick-highlight {
     background-color: rgba(94, 52, 142, 0.6);
 }
-
+#videowrap {
+    background-image:url('https://media.giphy.com/avatars/bigblueboo/uhhQXQpMub0T.gif')!important;
+}
