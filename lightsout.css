@@ -119,5 +119,5 @@ div#plmeta, ul#queue {
 #videowrap {
     background-image:url('https://qzprod.files.wordpress.com/2016/03/kapoor.png')!important;
      position:relative!important;
-    z-index:-1!important;
+    z-index:2!important;
 }
