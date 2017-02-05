@@ -118,4 +118,5 @@ div#plmeta, ul#queue {
 }
 #videowrap {
     background-image:url('https://media.giphy.com/avatars/bigblueboo/uhhQXQpMub0T.gif')!important;
+    z-index:1;
 }
