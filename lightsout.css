@@ -17,17 +17,6 @@
     color: #999!important;
 }
 
-#afkCount {
-    top: 2px!important;
-}
-
-#afkCount .activeusercount {
-    color: #808080!important;
-}
-
-#afkCount .afkusercount {
-    color: #666!important;
-}
 
  #userlist {
     background-color: #222!important;
@@ -46,8 +35,8 @@
     border-color: rgba(0,0,0,.9);
 }
 
-#chatinput #chatline, #messagebuffer, #userlist {
-    border-color: #161616!important;
+ #chatline, #messagebuffer, #userlist {
+    border-color: #000000!important;
 }
 
 #chatinput #chatline {
@@ -128,60 +117,3 @@ div#plmeta, ul#queue {
     background-color: rgba(94, 52, 142, 0.6);
 }
 
-}
-
-.btn-default.active, .btn-default.focus, .btn-default:active, .btn-default:focus, .btn-default:hover, .open>.dropdown-toggle.btn-default {
-    color: #fff!important;
-    background-color: #222!important;
-    border-color: rgba(0,0,0,.6)!important;
-}
-
-#voteskip.btn.btn-sm.btn-default:hover, .pm-buffer.linewrap {
-    background-color:#222!important;
-
-}
-
-.panel-default>.panel-heading {
-    background-color: #333!important;
-}
-
-.dropdown-menu {
-    background-color: #333!important;
-    text-shadow: 0 1px black!important;
-}
-
-input.form-control[type="text"], input.form-control[type="password"], input.form-control[type="email"], textarea.form-control, #footer {
-    background-color: #161616!important;
-}
-
-.form-control {
-    border-color: #111!important;
-}
-
-.queue_entry {
-    background-color: #161616!important;
-}
-
-div#plmeta, ul#queue {
-    background-color: rgba(22, 22, 22, 0.7)!important;
-}
-
-.queue_active.queue_temp {
-    background-color: #505050!important;
-}
-
-#resize-video-larger, #resize-video-smaller {
-    color: #444!important;
-}
-
-#resize-video-larger:hover, #resize-video-smaller:hover {
-    color: #777!important;
-}
-
-#chatwrap {
-    background: none!important;
-}
-
-#userlist .nick-highlight {
-    background-color: rgba(94, 52, 142, 0.6);
-}
