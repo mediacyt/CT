@@ -119,5 +119,58 @@ div#plmeta, ul#queue {
 #videowrap {
     background-image:url('https://qzprod.files.wordpress.com/2016/03/kapoor.png')!important;
      position:relative!important;
-    z-index:2!important;
+    z-index:1!important;
+}
+#currentMediaTitle {
+    
+    border-radius: 5px;
+    color:#FFFFFF;
+    margin-bottom: 5px;
+    padding:10px;
+font-weight: bold;
+font-family: 'Righteous';
+font-size: 24px;
+text-align: center;
+text-shadow: -1px 0 blue, 0 1px blue, 1px 0 blue, 0 -1px blue;
+text-shadow: 0em -.05em .5em blue, 0em .05em .5em blue, 0em -.3em .25em #000000, 0em .3em .25em #000000,.25em .25em .5em #000000, .25em -.25em .5em #000000, .2em .2em .5em blue, -.2em -.2em .5em blue;;
+background-image: url(http://orig04.deviantart.net/0c2e/f/2016/083/0/a/2_by_tenthwave-d9wbmn1.gif),
+	url(http://orig04.deviantart.net/0c2e/f/2016/083/0/a/2_by_tenthwave-d9wbmn1.gif);
+     
+color:gray;
+	background-repeat: no-repeat,
+		           no-repeat;
+						
+	background-position: right bottom,
+			   left bottom;
+
+                 
+     
+        background-size: 7% 90%,
+                         7% 90%;
+         
+       background-attachment: inherit;
+
+}
+
+
+#motd   {
+background-color:rgba(0, 0, 0, 0.9);
+
+}
+#motdwrap   {
+background-color:rgba(0, 0, 0, 0.9);
+border: 0px;
+}
+
+div#messagebuffer
+ {
+background: url("");
+background-color: #000000; 
+background-position: center;
+border-color:rgb(0,0,0)!important;
+background-color:transparent!important;
+    background-image: linear-gradient(to bottom, 
+        rgba(0, 0, 0, 0.8), 
+        rgba(0, 0, 40, 0.8));
+    color: #ffffff;
 }
