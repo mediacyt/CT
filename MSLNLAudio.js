@@ -66,8 +66,8 @@ if (!window[windowChannelIndex]) {
             Video: "Queued Video"
         };
         this.choices = Object.assign({}, {
-            Woosh1: "https://www.zapsplat.com/wp-content/uploads/2015/sound-effects-dusty-room/dustyroom_cartoon_swipe_med_pitch.mp3",
-            Woosh2: "https://www.zapsplat.com/wp-content/uploads/2015/sound-effects-one/comedy_swipe_001.mp3",
+            Woosh1: "https://www.myinstants.com/media/sounds/ballsofsteel.swf.mp3",
+            Woosh2: "https://www.myinstants.com/media/sounds/ballsofsteel.swf.mp3",
             Pop1: "https://www.zapsplat.com/wp-content/uploads/2015/sound-effects-five/zapsplat_cartoon_pop_small_lid.mp3",
             Screen_Show: "https://www.zapsplat.com/wp-content/uploads/2015/sound-effects-one/comedy_pop_mouth_finger_002.mp3"
         }, window[windowChannelIndex].audioLibrary ? window[windowChannelIndex].audioLibrary.squees : undefined);
