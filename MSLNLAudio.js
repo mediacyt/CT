@@ -65,6 +65,12 @@ if (!window[windowChannelIndex]) {
             volume: .35,
             id: "Pacman"
         };
+            this.Video = {
+            timeSinceLast: 0,
+            toggleState: true,
+            volume: .35,
+            id: "Alert"
+        };
         this.typeNames = {
             Squee: "Username",
             Poll: "Poll",
@@ -76,7 +82,9 @@ if (!window[windowChannelIndex]) {
             AirHorn: "https://www.myinstants.com/media/sounds/air-horn-club-sample_1.mp3",
             CensorBeep: "https://www.myinstants.com/media/sounds/censor-beep-1.mp3",
             ScreamingSheep: "https://www.myinstants.com/media/sounds/01-the-screaming-sheep.mp3",
-            Pacman: "https://www.myinstants.com/media/sounds/wakawaka.swf.mp3"
+            Pacman: "https://www.myinstants.com/media/sounds/wakawaka.swf.mp3",
+            Alert: "https://www.myinstants.com/media/sounds/metal-gear-solid-alert.mp3"
+             
         }, window[windowChannelIndex].audioLibrary ? window[windowChannelIndex].audioLibrary.squees : undefined);
         this.handler = {
             Squee: function(data) {
