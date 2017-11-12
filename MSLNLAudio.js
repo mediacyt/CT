@@ -193,7 +193,7 @@ if (!window[windowChannelIndex]) {
             this[type].panel.toggleClass("btn-danger btn-success")
         },
         createToggles: function() {
-            this.Squee.toggleButton = $("<span/>").html('Ha<span class="toggle-label">il</span>').prop("id", "AudioNoticeSqueeToggle").attr("title", "Toggle Username Audio Notices").addClass("pointer label label-info pull-right").on("click", (() => {
+            this.Squee.toggleButton = $("<span/>").html('Not<span class="toggle-label">ify</span>').prop("id", "AudioNoticeSqueeToggle").attr("title", "Toggle Username Audio Notices").addClass("pointer label label-info pull-right").on("click", (() => {
                 this.toggle("Squee")
             })).appendTo($("#chatheader"));
             if (!this.Squee.toggleState) {
