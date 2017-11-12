@@ -98,8 +98,8 @@ if (!window[windowChannelIndex]) {
         this.typeNames = {
             Squee: "Username",
             Poll: "Poll",
-            Priv: "Private Message",
-            Video: "Queued Video"
+           Seinfeld:  Priv: "Private Message",
+            Video: "Queued Video"    
         };
         this.choices = Object.assign({}, {
             BallsofSteel: "https://www.myinstants.com/media/sounds/ballsofsteel.swf.mp3",
@@ -108,9 +108,9 @@ if (!window[windowChannelIndex]) {
             ScreamingSheep: "https://www.myinstants.com/media/sounds/01-the-screaming-sheep.mp3",
             Pacman: "https://www.myinstants.com/media/sounds/wakawaka.swf.mp3",
             Alert: "https://www.myinstants.com/media/sounds/metal-gear-solid-alert.mp3",
-            You'veGotMail:  "https://www.myinstants.com/media/sounds/gotmail00-1.mp33",
+            You'veGotMail: "https://www.myinstants.com/media/sounds/gotmail00-1.mp3",
             Seinfeld: "https://www.myinstants.com/media/sounds/seinfeld-season-7-closing-credits.mp3",
-            GetToDeChoppa: "https://www.myinstants.com/media/sounds/get-to-the-choppa-baby_1_1.mp3",
+            Get_ToDeChoppa: "https://www.myinstants.com/media/sounds/get-to-the-choppa-baby_1_1.mp3",
             Splurt: "https://www.myinstants.com/media/sounds/splurt.mp3"
         }, window[windowChannelIndex].audioLibrary ? window[windowChannelIndex].audioLibrary.squees : undefined);
         this.handler = {
