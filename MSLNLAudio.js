@@ -39,25 +39,31 @@ if (!window[windowChannelIndex]) {
             timeSinceLast: 0,
             toggleState: true,
             volume: .6,
-            id: "Woosh1"
+            id: "BallsOfSteel"
         };
         this.Poll = {
             timeSinceLast: 0,
             toggleState: true,
             volume: .3,
-            id: "Woosh2"
+            id: "AirHorn"
         };
         this.Priv = {
             timeSinceLast: 0,
             toggleState: true,
             volume: .35,
-            id: "Pop1"
+            id: "CensorBeep"
         };
         this.Video = {
             timeSinceLast: 0,
             toggleState: true,
             volume: .35,
-            id: "Pop2"
+            id: "ScreamingSheep"
+        };
+            this.Video = {
+            timeSinceLast: 0,
+            toggleState: true,
+            volume: .35,
+            id: "Pacman"
         };
         this.typeNames = {
             Squee: "Username",
@@ -66,10 +72,11 @@ if (!window[windowChannelIndex]) {
             Video: "Queued Video"
         };
         this.choices = Object.assign({}, {
-            Woosh1: "https://www.myinstants.com/media/sounds/ballsofsteel.swf.mp3",
-            Woosh2: "https://www.myinstants.com/media/sounds/ballsofsteel.swf.mp3",
-            Pop1: "https://www.zapsplat.com/wp-content/uploads/2015/sound-effects-five/zapsplat_cartoon_pop_small_lid.mp3",
-            Screen_Show: "https://www.zapsplat.com/wp-content/uploads/2015/sound-effects-one/comedy_pop_mouth_finger_002.mp3"
+            BallsofSteel: "https://www.myinstants.com/media/sounds/ballsofsteel.swf.mp3",
+            AirHorn: "https://www.myinstants.com/media/sounds/air-horn-club-sample_1.mp3",
+            CensorBeep: "https://www.myinstants.com/media/sounds/censor-beep-1.mp3",
+            ScreamingSheep: "https://www.myinstants.com/media/sounds/01-the-screaming-sheep.mp3",
+            Pacman: "https://www.myinstants.com/media/sounds/wakawaka.swf.mp3"
         }, window[windowChannelIndex].audioLibrary ? window[windowChannelIndex].audioLibrary.squees : undefined);
         this.handler = {
             Squee: function(data) {
