@@ -71,6 +71,30 @@ if (!window[windowChannelIndex]) {
             volume: .35,
             id: "Alert"
         };
+            this.Video = {
+            timeSinceLast: 0,
+            toggleState: true,
+            volume: .35,
+            id: "You'veGotMail"
+        };
+            this.Video = {
+            timeSinceLast: 0,
+            toggleState: true,
+            volume: .35,
+            id: "Seinfeld"
+        };
+           this.Video = {
+            timeSinceLast: 0,
+            toggleState: true,
+            volume: .35,
+            id: "GetToDeChoppa"
+        };
+            this.Video = {
+            timeSinceLast: 0,
+            toggleState: true,
+            volume: .35,
+            id: "Splurt"
+        };
         this.typeNames = {
             Squee: "Username",
             Poll: "Poll",
@@ -83,8 +107,11 @@ if (!window[windowChannelIndex]) {
             CensorBeep: "https://www.myinstants.com/media/sounds/censor-beep-1.mp3",
             ScreamingSheep: "https://www.myinstants.com/media/sounds/01-the-screaming-sheep.mp3",
             Pacman: "https://www.myinstants.com/media/sounds/wakawaka.swf.mp3",
-            Alert: "https://www.myinstants.com/media/sounds/metal-gear-solid-alert.mp3"
-             
+            Alert: "https://www.myinstants.com/media/sounds/metal-gear-solid-alert.mp3",
+            You'veGotMail:  "https://www.myinstants.com/media/sounds/gotmail00-1.mp33",
+            Seinfeld: "https://www.myinstants.com/media/sounds/seinfeld-season-7-closing-credits.mp3",
+            GetToDeChoppa: "https://www.myinstants.com/media/sounds/get-to-the-choppa-baby_1_1.mp3",
+            Splurt: "https://www.myinstants.com/media/sounds/splurt.mp3"
         }, window[windowChannelIndex].audioLibrary ? window[windowChannelIndex].audioLibrary.squees : undefined);
         this.handler = {
             Squee: function(data) {
