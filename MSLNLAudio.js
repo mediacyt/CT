@@ -112,8 +112,7 @@ if (!window[windowChannelIndex]) {
             Seinfeld: "https://www.myinstants.com/media/sounds/seinfeld-season-7-closing-credits.mp3",
             GetToDeChoppa: "https://www.myinstants.com/media/sounds/get-to-the-choppa-baby_1_1.mp3",
             Splurt: "https://www.myinstants.com/media/sounds/splurt.mp3"
-            
-        }, window[windowChannelIndex].audioLibrary ? window[windowChannelIndex].audioLibrary.squees : undefined);
+            }, window[windowChannelIndex].audioLibrary ? window[windowChannelIndex].audioLibrary.squees : undefined);
         this.handler = {
             Squee: function(data) {
                 var squee;
