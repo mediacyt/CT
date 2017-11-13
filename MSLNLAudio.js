@@ -98,7 +98,7 @@ if (!window[windowChannelIndex]) {
         this.typeNames = {
             Squee: "Username",
             Poll: "Poll",
-           Seinfeld:  Priv: "Private Message",
+            Priv: "Private Message",
             Video: "Queued Video"    
         };
         this.choices = Object.assign({}, {
