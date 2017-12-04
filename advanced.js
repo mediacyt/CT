@@ -1,10 +1,11 @@
 /***********************************************************************************************************************
 
-Mediasync Advanced  Â© 2016-2017 by Mediaman
+Synchtube Premium Â© 2016-2017 by ZimnyLech
 
 Version:		2.4.3
-Release date:		2017-12-04
-
+Release date:		2017-02-05
+License:		Creative Commons CC-BY-NC-SA 4.0
+License URL:		http://creativecommons.org/licenses/by-nc-sa/4.0/
 
 
 INSTALLATION:
@@ -40,7 +41,7 @@ if (typeof LOADED !== "undefined" || $("body").hasClass('chatOnly')) document.lo
 // API activation control
 
 START = new Date().getTime();
-var errmsg = 'Mediasync Advanced Error! Script was not activated properly, some functions may not work. '
+var errmsg = 'Synchtube Premium Error! Script was not activated properly, some functions may not work. '
 	   + 'If channel player doesn\'t work, refresh the page. '
 	   + 'Otherwise, ask channel administrator or disable Premium script access.';
 setTimeout(function() {if (typeof LOADED === "undefined") addServerMessage(errmsg)}, 5000);
@@ -175,7 +176,7 @@ VISIBLETAB	= {"options":1, "commands":1, "tools":1}
 
 // Optional channel favicon URL
 
-FaviconURL		= '';
+FaviconURL		= 'https://i.imgur.com/Bzn1Op5.png';
 
 // Channel name on the navbar instead of default server name
 
@@ -184,7 +185,7 @@ ChannelName		= '';
 // Channel mini logo (will be resized to 36 px height) on the navbar
 // and channel name left padding (depending on logo width, in px; width + 25 for the best effect)
 
-MiniLogoURL		= '';
+MiniLogoURL		= 'https://i.imgur.com/dD3ymk5.png';
 ChannelNamePadding	= 61;
 
 // Optional custom navbar welcome message (default: "Welcome")
@@ -281,23 +282,23 @@ TextFiltersArray = [
 // Lists for "Unicode Charaters" menu option
 // '|' character will make a new line
 
-
 UnicodeSymbolsArray = [
-	'←', '→', '↓', '↑', '↖', '↗', '↘', '↙', '↔', '↕', '⇦', '⇨', '⇩', '⇧', '⇒', '↵', '|',
-	'☆', '★', '▲', '▼', '◐', '◒', '♥', '♦', '♠', '♣', '|',
-	'○', '●', '⚪', '⚫', '□', '■', '▯', '▮', '░', '█', '|',
-	'♪', '♫', '☑', '☒', '✡', '☪', '✝', '☭', '☮', '☯', '♿', '♕', '✉', '☏', '|',
-	'©', '®', '™', '☼', '☾', '👍', '👎', '⁕', '✔', '❀', '⛔', '☢', '⚽', '|',
-	'≠', '∞', '∆', '∫', '‰', '¥', '€'
+	'â†', 'â†’', 'â†“', 'â†‘', 'â†–', 'â†—', 'â†˜', 'â†™', 'â†”', 'â†•', 'â‡¦', 'â‡¨', 'â‡©', 'â‡§', 'â‡’', 'â†µ', '|',
+	'â˜†', 'â˜…', 'â–²', 'â–¼', 'â—', 'â—’', 'â™¥', 'â™¦', 'â™ ', 'â™£', '|',
+	'â—‹', 'â—', 'âšª', 'âš«', 'â–¡', 'â– ', 'â–¯', 'â–®', 'â–‘', 'â–ˆ', '|',
+	'â™ª', 'â™«', 'â˜‘', 'â˜’', 'âœ¡', 'â˜ª', 'âœ', 'â˜­', 'â˜®', 'â˜¯', 'â™¿', 'â™•', 'âœ‰', 'â˜', '|',
+	'Â©', 'Â®', 'â„¢', 'â˜¼', 'â˜¾', 'ðŸ‘', 'ðŸ‘Ž', 'â•', 'âœ”', 'â€', 'â›”', 'â˜¢', 'âš½', '|',
+	'â‰ ', 'âˆž', 'âˆ†', 'âˆ«', 'â€°', 'Â¥', 'â‚¬'
 ];
 UnicodeLettersArray = [
-	'À', 'à', 'Á', 'á', 'Ā', 'ā', 'Ã', 'ã', 'Å', 'å', 'Ä', 'ä', 'Ą', 'ą', '|', 
-	'Ć', 'ć', 'Ĉ', 'ĉ', 'Č', 'č', 'Ç', 'ç', 'Đ', 'đ', 'È', 'è', 'É', 'é', 'Ē', 'ē', 'Ę', 'ę', '|',
-	'Ì', 'ì', 'Í', 'í', 'Ī', 'ī', 'I', 'ı', 'Ł', 'ł', 'Ň', 'ň', 'Ń', 'ń', '|',
-	'Ò', 'ò', 'Ó', 'ó', 'Ō', 'ō', 'Ô', 'ô', 'Õ', 'õ', 'Ǫ', 'ǫ', 'Ö', 'ö', 'Ř', 'ř', 'Ś', 'ś', 'Š', 'š', '|',
-	'Ù', 'ù', 'Ú', 'ú', 'Ū', 'ū', 'Ů', 'ů', 'Ü', 'ü', 'Ų', 'ų', 'Ỳ', 'ỳ', 'Ý', 'ý', '|',
-	'Ž', 'ž', 'Ź', 'ź', 'Ż', 'ż', 'Æ', 'æ', 'ẞ', 'ß', 'α', 'β', 'γ', 'δ', 'ω', 'μ', 'π'
+	'Ã€', 'Ã ', 'Ã', 'Ã¡', 'Ä€', 'Ä', 'Ãƒ', 'Ã£', 'Ã…', 'Ã¥', 'Ä„', 'Ä…', '|', 
+	'Ä†', 'Ä‡', 'Äˆ', 'Ä‰', 'ÄŒ', 'Ä', 'Ã‡', 'Ã§', 'Ä', 'Ä‘', 'Ãˆ', 'Ã¨', 'Ã‰', 'Ã©', 'Ä’', 'Ä“', 'Ä˜', 'Ä™', '|',
+	'ÃŒ', 'Ã¬', 'Ã', 'Ã­', 'Äª', 'Ä«', 'I', 'Ä±', 'Å', 'Å‚', 'Å‡', 'Åˆ', 'Åƒ', 'Å„', '|',
+	'Ã’', 'Ã²', 'Ã“', 'Ã³', 'ÅŒ', 'Å', 'Ã”', 'Ã´', 'Ã•', 'Ãµ', 'Çª', 'Ç«', 'Å˜', 'Å™', 'Åš', 'Å›', 'Å ', 'Å¡', '|',
+	'Ã™', 'Ã¹', 'Ãš', 'Ãº', 'Åª', 'Å«', 'Å®', 'Å¯', 'Å²', 'Å³', 'á»²', 'á»³', 'Ã', 'Ã½', '|',
+	'Å½', 'Å¾', 'Å¹', 'Åº', 'Å»', 'Å¼', 'Ã†', 'Ã¦', 'áºž', 'ÃŸ', 'Î±', 'Î²', 'Î³', 'Ï‰', 'Î¼', 'Ï€'
 ];
+
 // Additional layout themes
 
 ThemesArray = [
@@ -2054,6 +2055,22 @@ $('<div id="advoptswrap" class="col-lg-12 col-md-12" />').insertAfter("#queuefai
 $("#quality-btn").html($("#quality-btn").html() + USEROPTS.default_quality + ' â–¾');
 $("#quality-menu").find("a[val=" + USEROPTS.default_quality + "]").addClass('activated');
 if (!USEROPTS.show_timestamps) $("#hidetstamps-btn").addClass('btn-warning');
+
+
+// Synchtube Premium footer
+
+var html = '<br />Synchtube Premium, Copyright Â© 2016-2017 ZimnyLech Â· '
+	 + '<a href="https://dl.dropboxusercontent.com/s/1dyazoq6t7wh808/Premium.js" target="_blank">Code</a> Â· '
+	 + '<img src="http://simplehitcounter.com/hit.php?uid=2187367&f=16711680&b=0" /><br />'
+	 + '<a href="http://s06.flagcounter.com/more/rze9" target="_blank">'
+	 +   '<img id="spc" title="Flag Counter" src="http://s06.flagcounter.com/count/rze9/bg=FFFFFF/txt=000000/'
+	 +     'border=CCCCCC/columns=3/maxflags=12/viewers=0/labels=1/pageviews=1/" /></a>';
+$(".credit").html($(".credit").html() + html);
+
+
+// Optional additional custom footer
+
+if (CustomFooterHTML != '') $(".credit").html($(".credit").html() + '<br />' + CustomFooterHTML);
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -5519,13 +5536,13 @@ if (FaviconURL != "") {
 
 LOADED = true;
 var time = Math.round(new Date().getTime() - START) / 1000;
-addServerMessage('Mediasync Advanced v. ' + VERSION + ' activated (in ' + time + ' s.)');
+addServerMessage('Synchtube Premium v. ' + VERSION + ' activated (in ' + time + ' s.)');
 
 
 // Admin message
 
 if (!TOOLSENABLED && CLIENT.rank > 2) {
-	addServerMessage('You have now access to Mediasync Advanced Admin Tools.');
+	addServerMessage('You have now access to Premium Admin Tools.');
 	var html = 'Open "Advanced options" panel [<span class="glyphicon glyphicon-flash"></span> '
 		 + 'button below player] and select "Tools".';
 	addServerMessage(html);
