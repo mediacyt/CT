@@ -5536,7 +5536,7 @@ if (FaviconURL != "") {
 
 LOADED = true;
 var time = Math.round(new Date().getTime() - START) / 1000;
-addServerMessage('Synchtube Premium v. ' + VERSION + ' activated (in ' + time + ' s.)');
+addServerMessage('Mediasync Advanced v. ' + VERSION + ' activated (in ' + time + ' s.)');
 
 
 // Admin message
