@@ -2059,12 +2059,8 @@ if (!USEROPTS.show_timestamps) $("#hidetstamps-btn").addClass('btn-warning');
 
 // Synchtube Premium footer
 
-var html = '<br />Synchtube Premium, Copyright Â© 2016-2017 ZimnyLech Â· '
-	 + '<a href="https://dl.dropboxusercontent.com/s/1dyazoq6t7wh808/Premium.js" target="_blank">Code</a> Â· '
-	 + '<img src="http://simplehitcounter.com/hit.php?uid=2187367&f=16711680&b=0" /><br />'
-	 + '<a href="http://s06.flagcounter.com/more/rze9" target="_blank">'
-	 +   '<img id="spc" title="Flag Counter" src="http://s06.flagcounter.com/count/rze9/bg=FFFFFF/txt=000000/'
-	 +     'border=CCCCCC/columns=3/maxflags=12/viewers=0/labels=1/pageviews=1/" /></a>';
+var html = '<br />Mediasync, Copyright - 2017 Mediaman · '
+
 $(".credit").html($(".credit").html() + html);
 
 
