@@ -370,7 +370,7 @@ $plmeta		= $("#plmeta");
 function addServerMessage(html) {
 	setTimeout(function() {
 		$('<div class="chat-msg- serverinfo" />').appendTo($messagebuffer)
-		  .html('<span class="action scriptanswer">â–® ' + html + '</span>');
+		  .html('<span class="action scriptanswer">☑ ' + html + '</span>');
 		if (SCROLLCHAT) scrollChat();
 	}, 500);
 }
