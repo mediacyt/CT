@@ -1257,7 +1257,7 @@ function largePlayer() {
 		var classes = 'col-lg-10 col-md-10 col-lg-offset-1 col-md-offset-1';
 	}
 	$("#videowrap, #rightcontrols").removeClass().addClass(classes);
-	$("#scroll-to-chat").html('To player â–´');
+	$("#scroll-to-chat").html('To player ▲');
 	handleVideoResize();
 	if (SCROLLCHAT) scrollChat();
 }
@@ -4367,7 +4367,7 @@ function formatChatMessage(data, last) {
 
 	if (data.meta.addClass) message.addClass(data.meta.addClass);
 	if (data.meta.shadow) div.addClass("chat-shadow");
-	if (data.msg.indexOf('â†³ ') == 0) message.addClass("action scriptanswer");
+	if (data.msg.indexOf('●') == 0) message.addClass("action scriptanswer");
 
 	if (SHOWIMAGES) {
 		showImagesOnChat(message);
