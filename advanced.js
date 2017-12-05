@@ -1,11 +1,9 @@
 /***********************************************************************************************************************
 
-Synchtube Premium Â© 2016-2017 by ZimnyLech
+Mediasync Advanced © 2017 by MM
 
 Version:		2.4.3
 Release date:		2017-02-05
-License:		Creative Commons CC-BY-NC-SA 4.0
-License URL:		http://creativecommons.org/licenses/by-nc-sa/4.0/
 
 
 INSTALLATION:
@@ -1627,9 +1625,9 @@ if (HIDEINDICATOR) $chatwrap.addClass('noindicator');
 
 $("#modflair").detach().prependTo($chatheader);
 $('<span id="scroll-top" class="label label-default pull-right pointer scroll-label" />')
-  .insertBefore($userlisttoggle).attr('title', 'Scroll chat panel to top').html('Top â–´');
+  .insertBefore($userlisttoggle).attr('title', 'Scroll chat panel to top').html('Top');
 $('<span id="scroll-to-pl" class="label label-default pull-right pointer scroll-label" />')
-  .insertBefore($userlisttoggle).attr('title', 'Scroll to playlist').html('Pl ▼');
+  .insertBefore($userlisttoggle).attr('title', 'Scroll to playlist').html('Pl');
 $('<span id="expand-chat" class="label label-default pull-right pointer scroll-label" />')
   .insertBefore($userlisttoggle).attr('title', 'Toggle chat expanding')
   .html('<span class="glyphicon glyphicon-resize-vertical"></span>');
@@ -1705,7 +1703,7 @@ if (typeof MediaDatabase !== "undefined" || getURLVar("db") != "" || (EXECDB && 
 // Playlist options dropdown menu
 
 var html = '<button id="plsbtn" class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown" '
-	 + 'title="Playlist controls"><span class="glyphicon glyphicon-cog"></span> ▼</button>'
+	 + 'title="Playlist controls"><span class="glyphicon glyphicon-cog"></span> </button>'
 	 + '<ul id="pls-menu" class="dropdown-menu dropdown-menu-right">'
 	 +   '<li><a id="pls-1"><span class="glyphicon glyphicon-cog nav-cog layout-cog"></span>'
 	 +     'Global Playback Options</a></li>'
@@ -1768,7 +1766,7 @@ $('<div id="plrbtn-outer" class="btn-group dropup" />').prependTo("#videocontrol
 
 if (!USEROPTS.wmode_transparent) {
 	$("#plrbtn-outer").removeClass('dropup');
-	document.getElementById("plr-btn").innerHTML = '<span class="glyphicon glyphicon-cog"></span> ▼';	
+	document.getElementById("plr-btn").innerHTML = '<span class="glyphicon glyphicon-cog"></span> ;	
 }
 if (FULLTITLE) $("#plr-5").addClass('activated');
 PROGRESSBAR ? showProgressBar() : $("#plr-6").addClass('activated');
@@ -1777,7 +1775,7 @@ PROGRESSBAR ? showProgressBar() : $("#plr-6").addClass('activated');
 // Advanced options button
 
 $advoptsbtn = $('<button id="advopts-btn" class="btn btn-sm btn-default" title="Advanced options" />')
-  .html('<span class="glyphicon glyphicon-flash"></span> ▼').insertBefore("#mediarefresh");
+  .html('<span class="glyphicon glyphicon-flash"></span> ).insertBefore("#mediarefresh");
 
 
 // Favourite Premium links button
@@ -1789,7 +1787,7 @@ $favsbtn = $('<button id="favs-btn" class="btn btn-sm btn-default" title="Add an
 // Chat colors button and menu
 
 var html = '<button id="colors-btn" type="button" class="btn btn-sm btn-default dropdown-toggle" '
-	 +   'data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Colors ▲´</button>'
+	 +   'data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Colors</button>'
 	 + '<ul id="colors-wrap" class="dropdown-menu centered"></ul>';
 $colorsmenu = $('<div id="colors-menu" class="btn-group dropup" />').appendTo("#leftcontrols").html(html);
 
@@ -1803,7 +1801,7 @@ for (i in ColorsArray) {
 	var j = ColorsArray.length > 50 ? 8 : 5;
 	if (i % j == 0) var colgroup = $('<li class="btn-group btn-colors" />').appendTo("#colors-wrap");
 	$('<button class="btn btn-default btn-sm cbtn" onclick="insertText(\'col:' + ColorsArray[i] + ':\')" />')
-	  .css('background-color', ColorsArray[i]).html('▲ ').appendTo(colgroup);
+	  .css('background-color', ColorsArray[i]).html('').appendTo(colgroup);
 }
 
 
@@ -1933,7 +1931,7 @@ if (CHATFONTSIZE != 100) {
 
 // Playlist labels
 
-var html = LARGEPLAYER ? 'To player ▲´' : 'To chat ▲´';
+var html = LARGEPLAYER ? 'To player' : 'To chat ';
 $('<span id="scroll-to-chat" class="label label-default pull-right pointer scroll-label" title="Scroll to chat" />')
   .appendTo($plmeta).html(html);
 $('<span id="hide-playlist" class="label label-default pull-right pointer scroll-label" title="Hide playlist" />')
@@ -2052,7 +2050,7 @@ var html = '<div class="well"><div class="btn-group">'
 	 + '</div></div>';
 $('<div id="advoptswrap" class="col-lg-12 col-md-12" />').insertAfter("#queuefail").html(html).hide();
 
-$("#quality-btn").html($("#quality-btn").html() + USEROPTS.default_quality + ' ▼');
+$("#quality-btn").html($("#quality-btn").html() + USEROPTS.default_quality + ' ');
 $("#quality-menu").find("a[val=" + USEROPTS.default_quality + "]").addClass('activated');
 if (!USEROPTS.show_timestamps) $("#hidetstamps-btn").addClass('btn-warning');
 
@@ -3371,7 +3369,7 @@ $("#quality-menu").find("a").on("click", function() {
 	USEROPTS.default_quality = $(this).attr('val');
 	var text = USEROPTS.default_quality;
 	if (text == "best") text = 'highest';
-	$("#quality-btn").html('<span class="glyphicon glyphicon-film"></span> ' + text + ' ▼');
+	$("#quality-btn").html('<span class="glyphicon glyphicon-film"></span> ' + text + ' ');
 });
 
 $("#leader-btn").on("click", function() {
