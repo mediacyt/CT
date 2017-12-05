@@ -1766,7 +1766,7 @@ $('<div id="plrbtn-outer" class="btn-group dropup" />').prependTo("#videocontrol
 
 if (!USEROPTS.wmode_transparent) {
 	$("#plrbtn-outer").removeClass('dropup');
-	document.getElementById("plr-btn").innerHTML = '<span class="glyphicon glyphicon-cog"></span> ;	
+	document.getElementById("plr-btn").innerHTML = '<span class="glyphicon glyphicon-cog"></span>' ;	
 }
 if (FULLTITLE) $("#plr-5").addClass('activated');
 PROGRESSBAR ? showProgressBar() : $("#plr-6").addClass('activated');
