@@ -1272,7 +1272,7 @@ function normalPlayer() {
 	var class2 = 12 - parseInt(match[1], 10);
 	$chatwrap.removeClass().addClass('col-md-' + class1 + ' col-lg-' + class1);
 	$("#videowrap, #rightcontrols").removeClass().addClass('col-md-' + class2 + ' col-lg-' + class2);
-	$("#scroll-to-chat").html('To chat â–´');
+	$("#scroll-to-chat").html('To chat ▲');
 	collapseChat();
 	handleVideoResize();
 	if (SCROLLCHAT) scrollChat();
