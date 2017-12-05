@@ -1629,7 +1629,7 @@ $("#modflair").detach().prependTo($chatheader);
 $('<span id="scroll-top" class="label label-default pull-right pointer scroll-label" />')
   .insertBefore($userlisttoggle).attr('title', 'Scroll chat panel to top').html('Top â–´');
 $('<span id="scroll-to-pl" class="label label-default pull-right pointer scroll-label" />')
-  .insertBefore($userlisttoggle).attr('title', 'Scroll to playlist').html('Pl â–¾');
+  .insertBefore($userlisttoggle).attr('title', 'Scroll to playlist').html('Pl ▼');
 $('<span id="expand-chat" class="label label-default pull-right pointer scroll-label" />')
   .insertBefore($userlisttoggle).attr('title', 'Toggle chat expanding')
   .html('<span class="glyphicon glyphicon-resize-vertical"></span>');
@@ -1705,7 +1705,7 @@ if (typeof MediaDatabase !== "undefined" || getURLVar("db") != "" || (EXECDB && 
 // Playlist options dropdown menu
 
 var html = '<button id="plsbtn" class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown" '
-	 + 'title="Playlist controls"><span class="glyphicon glyphicon-cog"></span> â–¾</button>'
+	 + 'title="Playlist controls"><span class="glyphicon glyphicon-cog"></span> ▼</button>'
 	 + '<ul id="pls-menu" class="dropdown-menu dropdown-menu-right">'
 	 +   '<li><a id="pls-1"><span class="glyphicon glyphicon-cog nav-cog layout-cog"></span>'
 	 +     'Global Playback Options</a></li>'
@@ -1768,7 +1768,7 @@ $('<div id="plrbtn-outer" class="btn-group dropup" />').prependTo("#videocontrol
 
 if (!USEROPTS.wmode_transparent) {
 	$("#plrbtn-outer").removeClass('dropup');
-	document.getElementById("plr-btn").innerHTML = '<span class="glyphicon glyphicon-cog"></span> â–¾';	
+	document.getElementById("plr-btn").innerHTML = '<span class="glyphicon glyphicon-cog"></span> ▼';	
 }
 if (FULLTITLE) $("#plr-5").addClass('activated');
 PROGRESSBAR ? showProgressBar() : $("#plr-6").addClass('activated');
@@ -1777,7 +1777,7 @@ PROGRESSBAR ? showProgressBar() : $("#plr-6").addClass('activated');
 // Advanced options button
 
 $advoptsbtn = $('<button id="advopts-btn" class="btn btn-sm btn-default" title="Advanced options" />')
-  .html('<span class="glyphicon glyphicon-flash"></span> â–¾').insertBefore("#mediarefresh");
+  .html('<span class="glyphicon glyphicon-flash"></span> ▼').insertBefore("#mediarefresh");
 
 
 // Favourite Premium links button
@@ -2052,7 +2052,7 @@ var html = '<div class="well"><div class="btn-group">'
 	 + '</div></div>';
 $('<div id="advoptswrap" class="col-lg-12 col-md-12" />').insertAfter("#queuefail").html(html).hide();
 
-$("#quality-btn").html($("#quality-btn").html() + USEROPTS.default_quality + ' â–¾');
+$("#quality-btn").html($("#quality-btn").html() + USEROPTS.default_quality + ' ▼');
 $("#quality-menu").find("a[val=" + USEROPTS.default_quality + "]").addClass('activated');
 if (!USEROPTS.show_timestamps) $("#hidetstamps-btn").addClass('btn-warning');
 
@@ -3371,7 +3371,7 @@ $("#quality-menu").find("a").on("click", function() {
 	USEROPTS.default_quality = $(this).attr('val');
 	var text = USEROPTS.default_quality;
 	if (text == "best") text = 'highest';
-	$("#quality-btn").html('<span class="glyphicon glyphicon-film"></span> ' + text + ' â–¾');
+	$("#quality-btn").html('<span class="glyphicon glyphicon-film"></span> ' + text + ' ▼');
 });
 
 $("#leader-btn").on("click", function() {
