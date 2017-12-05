@@ -1735,7 +1735,7 @@ if (HIDEPLSBTNS) {
 // Player options dropup menu
 
 var html = '<button id="plr-btn" class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown" '
-	 + 'title="Player controls"><span class="glyphicon glyphicon-cog"></span> â–´</button>'
+	 + 'title="Player controls"><span class="glyphicon glyphicon-cog"></span> ▲´</button>'
 	 + '<ul id="plr-menu" class="dropdown-menu dropdown-menu-right noclose">'
 	 +   '<li><a id="plr-1" class="opt"><span class="glyphicon glyphicon-ok"></span>Hide Player Until Next</a></li>'
 	 +   '<li><a id="plr-2" class="opt"><span class="glyphicon glyphicon-ok"></span>'
@@ -1789,7 +1789,7 @@ $favsbtn = $('<button id="favs-btn" class="btn btn-sm btn-default" title="Add an
 // Chat colors button and menu
 
 var html = '<button id="colors-btn" type="button" class="btn btn-sm btn-default dropdown-toggle" '
-	 +   'data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Colors â–´</button>'
+	 +   'data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Colors ▲´</button>'
 	 + '<ul id="colors-wrap" class="dropdown-menu centered"></ul>';
 $colorsmenu = $('<div id="colors-menu" class="btn-group dropup" />').appendTo("#leftcontrols").html(html);
 
@@ -1803,7 +1803,7 @@ for (i in ColorsArray) {
 	var j = ColorsArray.length > 50 ? 8 : 5;
 	if (i % j == 0) var colgroup = $('<li class="btn-group btn-colors" />').appendTo("#colors-wrap");
 	$('<button class="btn btn-default btn-sm cbtn" onclick="insertText(\'col:' + ColorsArray[i] + ':\')" />')
-	  .css('background-color', ColorsArray[i]).html('â– ').appendTo(colgroup);
+	  .css('background-color', ColorsArray[i]).html('▲ ').appendTo(colgroup);
 }
 
 
@@ -1815,11 +1815,11 @@ var html = '<button id="notepad-btn" class="btn btn-sm btn-default btn-chatctrl"
 	 +   '<span class="glyphicon glyphicon-volume-down"></span></button>'
 	 + '<div id="chatfunc-outer" class="dropup btn-group">'
 	 +   '<button id="chatfunc-btn" class="btn btn-sm btn-default btn-chatctrl dropdown-toggle" '
-	 +   'data-toggle="dropdown" title="Chat functions"><span class="glyphicon glyphicon-wrench"></span> â–´</button>'
+	 +   'data-toggle="dropdown" title="Chat functions"><span class="glyphicon glyphicon-wrench"></span>▲´</button>'
 	 +   '<ul id="chatfunc-menu" class="dropdown-menu dropdown-menu-right"></ul>'
 	 + '</div><div id="chatopts-outer" class="dropup btn-group">'
 	 +   '<button id="chatopts-btn" class="btn btn-sm btn-default btn-chatctrl dropdown-toggle" '
-	 +   'data-toggle="dropdown" title="Chat options"><span class="glyphicon glyphicon-cog"></span> â–´</button>'
+	 +   'data-toggle="dropdown" title="Chat options"><span class="glyphicon glyphicon-cog"></span>▲´</button>'
 	 +   '<ul id="chatopts-menu" class="dropdown-menu dropdown-menu-right noclose"></ul></div>';
 $chatcontrols = $('<div id="chatcontrols" class="btn-group pull-right" />').appendTo("#leftcontrols").html(html);
 
@@ -1933,7 +1933,7 @@ if (CHATFONTSIZE != 100) {
 
 // Playlist labels
 
-var html = LARGEPLAYER ? 'To player â–´' : 'To chat â–´';
+var html = LARGEPLAYER ? 'To player ▲´' : 'To chat ▲´';
 $('<span id="scroll-to-chat" class="label label-default pull-right pointer scroll-label" title="Scroll to chat" />')
   .appendTo($plmeta).html(html);
 $('<span id="hide-playlist" class="label label-default pull-right pointer scroll-label" title="Hide playlist" />')
@@ -4367,7 +4367,7 @@ function formatChatMessage(data, last) {
 
 	if (data.meta.addClass) message.addClass(data.meta.addClass);
 	if (data.meta.shadow) div.addClass("chat-shadow");
-	if (data.msg.indexOf('●') == 0) message.addClass("action scriptanswer");
+	if (data.msg.indexOf('● ') == 0) message.addClass("action scriptanswer");
 
 	if (SHOWIMAGES) {
 		showImagesOnChat(message);
@@ -4634,7 +4634,7 @@ function sendMessage() {
 				_msg = _msg.substring(3);
 			}
 			socket.emit("chatMsg", {msg:_msg, meta:meta});
-			msg = '●' + msg;
+			msg = '● ' + msg;
 		}
 		if (COMMAND && CHANNEL.opts.chat_antiflood && CHANNEL.opts.chat_antiflood_params.burst < 2) {
 			var html = 'Warning! This command cannot be executed - chat antiflood option is enabled. '
