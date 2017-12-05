@@ -4634,7 +4634,7 @@ function sendMessage() {
 				_msg = _msg.substring(3);
 			}
 			socket.emit("chatMsg", {msg:_msg, meta:meta});
-			msg = 'â†³ ' + msg;
+			msg = '●' + msg;
 		}
 		if (COMMAND && CHANNEL.opts.chat_antiflood && CHANNEL.opts.chat_antiflood_params.burst < 2) {
 			var html = 'Warning! This command cannot be executed - chat antiflood option is enabled. '
@@ -5447,7 +5447,7 @@ toggleLayoutElements();
 $messagebuffer.find("div").each(function() {
 	if ($(this).children().length > 0) {
 		var message = $(this).children().last();
-		if (message.html().indexOf('â†³ ') > -1) {
+		if (message.html().indexOf('● ') > -1) {
 			message.addClass('action scriptanswer');
 		}
 		if (EXECFILTERS) {
