@@ -1802,7 +1802,7 @@ for (i in ColorsArray) {
 	var j = ColorsArray.length > 50 ? 8 : 5;
 	if (i % j == 0) var colgroup = $('<li class="btn-group btn-colors" />').appendTo("#colors-wrap");
 	$('<button class="btn btn-default btn-sm cbtn" onclick="insertText(\'col:' + ColorsArray[i] + ':\')" />')
-	  .css('background-color', ColorsArray[i]).html('').appendTo(colgroup);
+	  .css('background-color', ColorsArray[i]).html('□').appendTo(colgroup);
 }
 
 
