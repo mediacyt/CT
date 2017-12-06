@@ -1,10 +1,11 @@
 /***********************************************************************************************************************
 
-Mediasync Advanced © 2017 by MM
+-Synchtube Premium Â© 2016-2017 by ZimnyLech
 
 Version:		2.4.3
 Release date:		2017-02-05
-
+-License:		Creative Commons CC-BY-NC-SA 4.0		
+-License URL:		http://creativecommons.org/licenses/by-nc-sa/4.0/
 
 INSTALLATION:
 _____________
@@ -1625,9 +1626,9 @@ if (HIDEINDICATOR) $chatwrap.addClass('noindicator');
 
 $("#modflair").detach().prependTo($chatheader);
 $('<span id="scroll-top" class="label label-default pull-right pointer scroll-label" />')
-  .insertBefore($userlisttoggle).attr('title', 'Scroll chat panel to top').html('Top');
+  .insertBefore($userlisttoggle).attr('title', 'Scroll chat panel to top').html('Top â–´');
 $('<span id="scroll-to-pl" class="label label-default pull-right pointer scroll-label" />')
-  .insertBefore($userlisttoggle).attr('title', 'Scroll to playlist').html('Pl');
+  .insertBefore($userlisttoggle).attr('title', 'Scroll to playlist').html('Pl ▼');
 $('<span id="expand-chat" class="label label-default pull-right pointer scroll-label" />')
   .insertBefore($userlisttoggle).attr('title', 'Toggle chat expanding')
   .html('<span class="glyphicon glyphicon-resize-vertical"></span>');
@@ -1703,7 +1704,7 @@ if (typeof MediaDatabase !== "undefined" || getURLVar("db") != "" || (EXECDB && 
 // Playlist options dropdown menu
 
 var html = '<button id="plsbtn" class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown" '
-	 + 'title="Playlist controls"><span class="glyphicon glyphicon-cog"></span> </button>'
+	 + 'title="Playlist controls"><span class="glyphicon glyphicon-cog"></span>▼ </button>'
 	 + '<ul id="pls-menu" class="dropdown-menu dropdown-menu-right">'
 	 +   '<li><a id="pls-1"><span class="glyphicon glyphicon-cog nav-cog layout-cog"></span>'
 	 +     'Global Playback Options</a></li>'
@@ -1766,7 +1767,7 @@ $('<div id="plrbtn-outer" class="btn-group dropup" />').prependTo("#videocontrol
 
 if (!USEROPTS.wmode_transparent) {
 	$("#plrbtn-outer").removeClass('dropup');
-	document.getElementById("plr-btn").innerHTML = '<span class="glyphicon glyphicon-cog"></span>' ;	
+	document.getElementById("plr-btn").innerHTML = '<span class="glyphicon glyphicon-cog"></span> ▼';	
 }
 if (FULLTITLE) $("#plr-5").addClass('activated');
 PROGRESSBAR ? showProgressBar() : $("#plr-6").addClass('activated');
