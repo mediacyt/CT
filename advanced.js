@@ -1776,7 +1776,7 @@ PROGRESSBAR ? showProgressBar() : $("#plr-6").addClass('activated');
 // Advanced options button
 
 $advoptsbtn = $('<button id="advopts-btn" class="btn btn-sm btn-default" title="Advanced options" />')
-  .html('<span class="glyphicon glyphicon-flash"></span>â–¾').insertBefore("#mediarefresh");
+  .html('<span class="glyphicon glyphicon-flash"></span>').insertBefore("#mediarefresh");
 
 
 // Favourite Premium links button
