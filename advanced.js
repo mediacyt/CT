@@ -175,7 +175,7 @@ VISIBLETAB	= {"options":1, "commands":1, "tools":1}
 
 // Optional channel favicon URL
 
-FaviconURL		= 'https://i.imgur.com/Bzn1Op5.png';
+FaviconURL		= '';
 
 // Channel name on the navbar instead of default server name
 
@@ -184,7 +184,7 @@ ChannelName		= '';
 // Channel mini logo (will be resized to 36 px height) on the navbar
 // and channel name left padding (depending on logo width, in px; width + 25 for the best effect)
 
-MiniLogoURL		= 'https://i.imgur.com/dD3ymk5.png';
+MiniLogoURL		= '';
 ChannelNamePadding	= 61;
 
 // Optional custom navbar welcome message (default: "Welcome")
