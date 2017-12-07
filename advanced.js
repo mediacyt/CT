@@ -1835,7 +1835,6 @@ var html = '<li><a id="chat-f1"><span class="glyphicon glyphicon-cog nav-cog lay
 	 + '<li><a id="chat-f3" class="opt"><span class="glyphicon glyphicon-ok"></span>Unicode Characters</a></li>'
 	 + '<li class="divider"></li>'
 	 + '<li><a id="chat-f4">Premium Commands List</a></li>'
-	 + '<li><a id="chat-f5">My Messages List</a></li>'
 	 + '<li class="divider"></li>'
 	 + '<li><a id="chat-f6" class="opt"><span class="glyphicon glyphicon-ok"></span>'
 	 +   'Userlist on Right</a></li>'
