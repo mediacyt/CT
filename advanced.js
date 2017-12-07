@@ -1256,7 +1256,7 @@ function largePlayer() {
 		var classes = 'col-lg-10 col-md-10 col-lg-offset-1 col-md-offset-1';
 	}
 	$("#videowrap, #rightcontrols").removeClass().addClass(classes);
-	$("#scroll-to-chat").html('To player ▲');
+	$("#scroll-to-chat").html('To player ▲);
 	handleVideoResize();
 	if (SCROLLCHAT) scrollChat();
 }
@@ -1271,7 +1271,7 @@ function normalPlayer() {
 	var class2 = 12 - parseInt(match[1], 10);
 	$chatwrap.removeClass().addClass('col-md-' + class1 + ' col-lg-' + class1);
 	$("#videowrap, #rightcontrols").removeClass().addClass('col-md-' + class2 + ' col-lg-' + class2);
-	$("#scroll-to-chat").html('To chat ▲');
+	$("#scroll-to-chat").html('To chat ▲);
 	collapseChat();
 	handleVideoResize();
 	if (SCROLLCHAT) scrollChat();
