@@ -5,7 +5,6 @@
 **|
 **@preserve
 */
-if(!playlistEnhancer){var playlistEnhancer={}}if(window[CHANNEL.name]&&window[CHANNEL.name].modulesOptions&&window[CHANNEL.name].modulesOptions.playlistEnhancer){playlistEnhancer.moveReporting=window[CHANNEL.name].modulesOptions.playlistEnhancer.moveReporting;playlistEnhancer.recentMedia=window[CHANNEL.name].modulesOptions.playlistEnhancer.recentMedia}else{playlistEnhancer.moveReporting=false;playlistEnhancer.recentMedia=true}/*!
 **|  Playlist Helper
 **@preserve
 */
