@@ -1734,7 +1734,7 @@ if (HIDEPLSBTNS) {
 // Player options dropup menu
 
 var html = '<button id="plr-btn" class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown" '
-	 + 'title="Player controls"><span class="glyphicon glyphicon-cog"></span> ▲´</button>'
+	 + 'title="Player controls"><span class="glyphicon glyphicon-cog"></span> ▴</button>'
 	 + '<ul id="plr-menu" class="dropdown-menu dropdown-menu-right noclose">'
 	 +   '<li><a id="plr-1" class="opt"><span class="glyphicon glyphicon-ok"></span>Hide Player Until Next</a></li>'
 	 +   '<li><a id="plr-2" class="opt"><span class="glyphicon glyphicon-ok"></span>'
@@ -1814,11 +1814,11 @@ var html = '<button id="notepad-btn" class="btn btn-sm btn-default btn-chatctrl"
 	 +   '<span class="glyphicon glyphicon-volume-down"></span></button>'
 	 + '<div id="chatfunc-outer" class="dropup btn-group">'
 	 +   '<button id="chatfunc-btn" class="btn btn-sm btn-default btn-chatctrl dropdown-toggle" '
-	 +   'data-toggle="dropdown" title="Chat functions"><span class="glyphicon glyphicon-wrench"></span>▲´</button>'
+	 +   'data-toggle="dropdown" title="Chat functions"><span class="glyphicon glyphicon-wrench"></span> ▴</button>'
 	 +   '<ul id="chatfunc-menu" class="dropdown-menu dropdown-menu-right"></ul>'
 	 + '</div><div id="chatopts-outer" class="dropup btn-group">'
 	 +   '<button id="chatopts-btn" class="btn btn-sm btn-default btn-chatctrl dropdown-toggle" '
-	 +   'data-toggle="dropdown" title="Chat options"><span class="glyphicon glyphicon-cog"></span>▲´</button>'
+	 +   'data-toggle="dropdown" title="Chat options"><span class="glyphicon glyphicon-cog"></span> ▴</button>'
 	 +   '<ul id="chatopts-menu" class="dropdown-menu dropdown-menu-right noclose"></ul></div>';
 $chatcontrols = $('<div id="chatcontrols" class="btn-group pull-right" />').appendTo("#leftcontrols").html(html);
 
