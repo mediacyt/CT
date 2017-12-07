@@ -4084,12 +4084,7 @@ $("#scroll-to-current").on("click", function() {
 	setTimeout(function() {$("#scroll-to-current").removeClass('label-success')}, 1000);
 });
 
-$("#expand-playlist").on("click", function() {
-	$(this).attr('title', EXPANDPL ? 'Expand playlist' : 'Collapse playlist').toggleClass('label-success');
-	$queue.toggleClass('expanded');
-	setOpt('SP_expandpl', EXPANDPL = !EXPANDPL);
-	scrollQueue();
-});
+
 
 $("#hide-playlist").on("click", function() {
 	toggleElement("#queue");
