@@ -5379,14 +5379,6 @@ var css = '.autoscroll {overflow-y:auto !important}\n'
 	+ '#pollwrap.tmode2 div.active:not(.dismissed) {left:50px !important}\n'
 	+ '#pollwrap.tmode div.dismissed, #pollwrap.tmode div.muted {display:none !important}\n'
 	+ '#pollwrap.tmode2 div.dismissed, #pollwrap.tmode2 div.muted {display:none !important}\n';
-if (MiniLogoURL != "") {
-	if ((typeof ChannelNamePadding !== "number") || ChannelNamePadding < 16) ChannelNamePadding = 61;
-	css += 'nav .navbar-brand.logo {\n'
-	    +  '  background-image:url("' + MiniLogoURL + '") !important; background-repeat:no-repeat !important;\n'
-	    +  '  background-position:15px center !important; background-size:auto 36px !important;\n'
-	    +  '  padding-left:' + ChannelNamePadding + 'px !important;\n'
-	    +  '}\n';
-}
 
 
 
