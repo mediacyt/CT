@@ -728,6 +728,23 @@ function onlineTime() {
 	ONLINETIME++;
 }
 
+// Page title
+
+function pageTitle() {
+	if (TABMODE == 0) {
+		var title = '/r/' + window.location.href.split("/").pop();
+	} else if (TABMODE == 1) {
+		var title = '[' + CHATMSGNUM + '] chat message(s)';
+	} else if (TABMODE == 2) {
+		if ($queue.find(".queue_entry").length > 0) {
+			var title = $(".queue_active").data("media").title;
+		} else {
+			var title = '(nothing playing)';
+		}
+	}
+	document.title = title;
+	PAGETITLE = title;
+}
 
 // Paste link from the favourites list to URL input
 
