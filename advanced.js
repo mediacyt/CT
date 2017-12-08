@@ -1936,8 +1936,6 @@ $('<span id="scroll-to-chat" class="label label-default pull-right pointer scrol
   .appendTo($plmeta).html(html);
 $('<span id="hide-playlist" class="label label-default pull-right pointer scroll-label" title="Hide playlist" />')
   .appendTo($plmeta).html('<span class="glyphicon glyphicon-ban-circle"></span>');
-$('<span id="expand-playlist" class="label label-default pull-right pointer scroll-label" />').appendTo($plmeta)
-  .attr('title', 'Expand playlist').html('<span class="glyphicon glyphicon-resize-vertical"></span>');
 $('<span id="scroll-to-current" class="label label-default pull-right pointer scroll-label" />').appendTo($plmeta)
   .attr('title', 'Scroll playlist to current item').html('<span class="glyphicon glyphicon-arrow-up"></span>');
 
