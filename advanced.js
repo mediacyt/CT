@@ -5380,6 +5380,18 @@ var css = '.autoscroll {overflow-y:auto !important}\n'
 	+ '#pollwrap.tmode div.dismissed, #pollwrap.tmode div.muted {display:none !important}\n'
 	+ '#pollwrap.tmode2 div.dismissed, #pollwrap.tmode2 div.muted {display:none !important}\n';
 
+if (MiniLogoURL != "") {
+	if ((typeof ChannelNamePadding !== "number") || ChannelNamePadding < 16) ChannelNamePadding = 61;
+	css += 'nav .navbar-brand.logo {\n'
+	    +  '  background-image:url("' + MiniLogoURL + '") !important; background-repeat:no-repeat !important;\n'
+	    +  '  background-position:15px center !important; background-size:auto 36px !important;\n'
+	    +  '  padding-left:' + ChannelNamePadding + 'px !important;\n'
+	    +  '}\n';
+}
+var name = (ChannelName == "") ? '/r/' + window.location.href.split('/').pop() : ChannelName;
+css += '.navbar-brand {font-size:0pt !important}\n'
+    +  '.navbar-brand:before {content:"' + name + '" !important; font-size:14pt !important}\n';
+$("head").append('<style id="hardcss" type="text/css">' + css + '</style>');
 
 
 // Set optional User CSS
