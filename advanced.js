@@ -5390,7 +5390,7 @@ if (MiniLogoURL != "") {
 }
 var name = (ChannelName == "") ? '/r/' + window.location.href.split('/').pop() : ChannelName;
 css += '.navbar-brand {font-size:0pt !important}\n'
-    +  '.navbar-brand:before {content:"' + name + '" !important; font-size:14pt !important}\n';
+    +  '.navbar-brand:before {content:"' + name + '" !important; font-size:0pt !important}\n';
 $("head").append('<style id="hardcss" type="text/css">' + css + '</style>');
 
 
