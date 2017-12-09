@@ -2377,7 +2377,7 @@ $("#layout-1").on("click", function() {
 	if (EXECDB) $("#exec-db").prop('checked', true);
 	if (CUSTOMDBURL != "") $("#customdburl").val(CUSTOMDBURL);
 
-	$('<button class="btn btn-primary">Save Changes</button>').prependTo(footer)
+	$('<button class="btn btn-default">Save Changes</button>').prependTo(footer)
 	  .on("click", function() {
 		TRANSPARENTNAV = $("#transparentnav").prop('checked');
 		TRANSPARENTNAV ? $nav.addClass('transparent') : $nav.removeClass('transparent');
