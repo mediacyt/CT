@@ -1021,7 +1021,7 @@ function toggleLayoutElements() {
 	}
      	var elms = {};
 	for (i in arr) {
-		var row = arr[i].split("|");
+		var row = arr[i].split(":");
 		elms[row[0]] = row[1];
 	}
 		
@@ -2364,7 +2364,7 @@ $("#layout-1").on("click", function() {
 	var j = 0;
 	for (i in arr) {
 		j++;
-		var row = arr[i].split(":");
+		var row = arr[i].split("|");
 		if (row[1] == 1) $("#elms_" + j).prop('checked', true);
 	}
 
