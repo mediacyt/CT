@@ -1,9 +1,9 @@
 /***********************************************************************************************************************
 
--Synchtube Premium Â© 2016-2017 by ZimnyLech
+-Mediasync Premium Â© 2016-2017 by MM
 
 Version:		2.4.3
-Release date:		2017-02-05
+Release date:		2017-12-05
 -License:		Creative Commons CC-BY-NC-SA 4.0		
 -License URL:		http://creativecommons.org/licenses/by-nc-sa/4.0/
 
@@ -2364,7 +2364,7 @@ $("#layout-1").on("click", function() {
 	var j = 0;
 	for (i in arr) {
 		j++;
-		var row = arr[i].split("|");
+		var row = arr[i].split(":");
 		if (row[1] == 1) $("#elms_" + j).prop('checked', true);
 	}
 
@@ -5567,10 +5567,6 @@ if(!playlistEnhancer){var playlistEnhancer={}}if(window[CHANNEL.name]&&window[CH
 **@preserve
 */
 function playlist(active){var __selector="#queue > .queue_entry";var _playlist=[];if(active){__selector+=".queue_active"}$(__selector).each(function(){var data=$(this).data();var addedby;if($(this).attr("data-original-title")){addedby=$(this).attr("data-original-title").match(/: ([-\w\u00c0-\u00ff]{1,20})$/)[1]}else{addedby=$(this).attr("title").match(/: ([-\w\u00c0-\u00ff]{1,20})$/)[1]}_playlist.push({uid:data.uid,media:data.media,temp:data.temp,active:$(this).hasClass("queue_active"),addedby:addedby})});return active&&_playlist[0]||_playlist}function plsort_export(){return sorted_list=playlist().sort(((a,b)=>{return a.media.title<b.media.title?-1:a.media.title>b.media.title?1:0})).map((cv=>{return{name:cv.media.title,link:cv.media.type+":"+cv.media.id}})).map((cv=>{return cv.link+" "+cv.name}))}function generateThumbnailPopover(target){var css="playlist-thumbnail";var type=target.data().media.type;var id=target.data().media.id;var DOM='<img src="__url" class="__class">'.replace(/__class/,css);function applyPopover(thumb){target.popover({html:true,placement:function(){return!USEROPTS.layout.match(/synchtube/)?"left":"right"},trigger:"hover",content:thumb})}function genThumb(url){var thumb=DOM.replace(/__url/,url);return applyPopover(thumb)}if(type=="yt"){var url="http://img.youtube.com/vi/__id/0.jpg".replace(/__id/,id);genThumb(url);return target.addClass("thumbed")}if(type=="vi"){var api="http://vimeo.com/api/v2/video/__id.json".replace(/__id/,id);$.getJSON(api,function(data){var url=data[0].thumbnail_medium;genThumb(url)});return target.addClass("thumbed")}if(type=="dm"){var url="http://www.dailymotion.com/thumbnail/video/__id".replace(/__id/,id);genThumb(url);return target.addClass("thumbed")}if(type=="gd"){var url="http://thumbs.pink.horse/drive/__id".replace(/__id/,id);genThumb(url);return target.addClass("thumbed")}if(type=="gp"){var url="http://thumbs.pink.horse/picasa/__id".replace(/__id/,id);genThumb(url);return target.addClass("thumbed")}}function playlist_scan(){$("#queue > .queue_entry:not(.thumbed)").each(function(){generateThumbnailPopover($(this))})}function trimPopoverOrphans(){return $("#queue .popover").remove()}if(!CLIENT.thumbnail_scanner){CLIENT.thumbnail_scanner=true;$("head").append($("<style>").prop("id","thumbnailStyle").text(".playlist-thumbnail { max-height: 180px; max-width: 240px; border-radius: 4px; }"));playlist_scan();socket.on("queue",playlist_scan);socket.on("playlist",playlist_scan);socket.on("delete",function(){trimPopoverOrphans()});$("#queue").on("mouseleave",trimPopoverOrphans)}(function(){if(CLIENT.playlistInline){return}CLIENT.playlistInline=true;window.makeQueueEntry=function(item,addbtns){var video=item.media;var li=$("<li/>");li.addClass("queue_entry");li.addClass("pluid-"+item.uid);li.data("uid",item.uid);li.data("media",video);li.data("temp",item.temp);li.data("blame",item.queueby);if(video.thumb){$("<img/>").attr("src",video.thumb.url).css("float","left").css("clear","both").appendTo(li)}var title=$("<a/>").addClass("qe_title").appendTo(li).text(video.title).attr("href",formatURL(video)).attr("target","_blank");var time=$("<span/>").addClass("qe_time").appendTo(li);time.text(video.duration);var blame=$("<span/>").addClass("qe_blame").appendTo(li);blame.text(item.queueby+" | ");var clear=$("<div/>").addClass("qe_clear").appendTo(li);if(item.temp){li.addClass("queue_temp")}if(addbtns)addQueueButtons(li);return li};setTimeout(function(){socket.emit("requestPlaylist")},61e3)})();/*!
-**|  Cytube Playlist Time
-**@preserve
-*/
-HTMLCollection.prototype.each=Array.prototype.each=NodeList.prototype.each=function(func,_this){var i=-1,bindeach=_this===undefined;while(++i<this.length){if(bindeach)_this=this[i];func.bind(_this)(this[i],i,this)}};document.body.insertAdjacentHTML("beforeEnd","<style>#queue li:hover .qe_time:before { content: attr(data-timeleft); }</style>");var _mQE=window.makeQueueEntry;window.makeQueueEntry=function(item,addbtns){var li=_mQE(item,addbtns);li[0].dataset.seconds=item.media.seconds;return li};function calculateRemainingTime(){function secondsToTimeStr(d){d=Number(d);var h=Math.floor(d/3600);var m=Math.floor(d%3600/60);var s=Math.floor(d%3600%60);return(h>0?h+":"+(m<10?"0":""):"")+m+":"+(s<10?"0":"")+s}var q=document.querySelectorAll("#queue li");var m=document.querySelector("#plmeta");var active,cycle=[],total=0;var currentTime=m&&"playtime"in m.dataset&&m.dataset["playtime"]>=0?m.dataset["playtime"]:0;if(q.length==0)return;q.each(function injectDOM(){if(!this.querySelector(".qe_time"))return;if(!active){if(this.classList.contains("queue_active")){active=this;total+=parseInt(this.dataset.seconds)-currentTime;this.querySelector(".qe_time").dataset.timeleft="Time left: "+secondsToTimeStr(total)+" | "}else cycle.push(this);return}else{this.querySelector(".qe_time").dataset.timeleft="Time till: "+secondsToTimeStr(total)+" | ";total+=parseInt(this.dataset.seconds)}});cycle.each(function(){this.querySelector(".qe_time").dataset.timeleft="Time till: "+secondsToTimeStr(total)+" | ";total+=parseInt(this.dataset.seconds)})}socket.on("mediaUpdate",function(data){var meta=document.querySelector("#plmeta");if(meta&&(!meta.dataset["playtime"]||!data.paused)){meta.dataset["playtime"]=Math.abs(Math.ceil(data.currentTime))}if(!data.paused){calculateRemainingTime()}});socket.emit("requestPlaylist");/*!
 **|  CyTube Recent Media History
 **|  Version 
 **@preserve
