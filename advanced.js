@@ -1019,11 +1019,12 @@ function toggleLayoutElements() {
 		setOpt('SP_elements', _ELEMENTS);
 		document.location.reload();
 	}
-
-	
-	
-	
-	
+     	var elms = {};
+	for (i in arr) {
+		var row = arr[i].split(":");
+		elms[row[0]] = row[1];
+	}
+		
 	var ids = {
 		"header":"#nav-collapsible > ul > li:not(.layout-menu), #navbar-up, #navbar-unpin, #logoutform",
 		"logo":"nav .navbar-brand", "motd":"#motdrow", "announcements":"#announcements",
