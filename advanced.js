@@ -1021,7 +1021,7 @@ function toggleLayoutElements() {
 	}
      	var elms = {};
 	for (i in arr) {
-		var row = arr[i].split(":");
+		var row = arr[i].split("|");
 		elms[row[0]] = row[1];
 	}
 		
