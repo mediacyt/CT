@@ -1010,36 +1010,6 @@ function toggleElement(div) {
 	$(div).css('display') == "none" ? $(div).show() : $(div).hide();
 }
 
-// Toggle various layout elements
-
-function toggleLayoutElements() {
-	var arr = ELEMENTS.split("|");
-	if (arr.length < _ELEMENTS.split("|").length) {
-		// temporary code to mantain compatibility with previous versions
-		setOpt('SP_elements', _ELEMENTS);
-		document.location.reload();
-	}
-	var elms = {};
-	for (i in arr) {
-		var row = arr[i].split(":");
-		elms[row[0]] = row[1];
-	}
-	var ids = {
-		"header":"#nav-collapsible > ul > li:not(.layout-menu), #navbar-up, #navbar-unpin, #logoutform",
-		"logo":"nav .navbar-brand", "motd":"#motdrow", "announcements":"#announcements",
-		"mainheader":"#chatheader, #videowrap-header", "videolabels":"#videowrap-header .label", 
-		"chatlabels":"#chatheader .label", "maincontrols":"#controlsrow",
-		"playlistbtns":"#plcontrol > button", "playlistmenu":"#plcontrol > div",
-		"playermenu":"#videocontrols > div", "playerbtns":"#videocontrols > button", "mediadbbtns":"#db-group",
-		"pollemotebtns":"#newpollbtn, #emotelistbtn", "colorsbtn":"#colors-btn",
-		"chatbtns":"#chatcontrols > button", "chatmenus":"#chatcontrols > div",
-		"plmeta":"#plmeta", "playlistlabels":"#plmeta .label", "footer":"#sitefooter, footer"
-	}
-	for (i in ids) {
-		elms[i] == 0 ? $(ids[i]).addClass('hidden') : $(ids[i]).removeClass('hidden');
-	}
-	elms["logo"] == 1 ? $(ids["logo"]).addClass('logo') : $(ids["logo"]).removeClass('hidden logo');
-}
 
 // Handle user joining
 
