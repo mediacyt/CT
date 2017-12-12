@@ -1,6 +1,6 @@
 /***********************************************************************************************************************
 
--Mediasync Premium Â© 2016-2017 by MM
+-Mediasync Plus Â© 2016-2017 by MM
 
 Version:		2.4.3
 Release date:		2017-12-05
@@ -40,7 +40,7 @@ if (typeof LOADED !== "undefined" || $("body").hasClass('chatOnly')) document.lo
 // API activation control
 
 START = new Date().getTime();
-var errmsg = 'Synchtube Premium Error! Script was not activated properly, some functions may not work. '
+var errmsg = 'Mediasync Plus Error! Script was not activated properly, some functions may not work. '
 	   + 'If channel player doesn\'t work, refresh the page. '
 	   + 'Otherwise, ask channel administrator or disable Premium script access.';
 setTimeout(function() {if (typeof LOADED === "undefined") addServerMessage(errmsg)}, 5000);
@@ -1627,7 +1627,7 @@ if (HIDEINDICATOR) $chatwrap.addClass('noindicator');
 
 $("#modflair").detach().prependTo($chatheader);
 $('<span id="scroll-top" class="label label-default pull-right pointer scroll-label" />')
-  .insertBefore($userlisttoggle).attr('title', 'Scroll chat panel to top').html('Top â–´');
+  .insertBefore($userlisttoggle).attr('title', 'Scroll chat panel to top').html('Top ▲');
 $('<span id="scroll-to-pl" class="label label-default pull-right pointer scroll-label" />')
   .insertBefore($userlisttoggle).attr('title', 'Scroll to playlist').html('Pl ▼');
 $('<span id="expand-chat" class="label label-default pull-right pointer scroll-label" />')
