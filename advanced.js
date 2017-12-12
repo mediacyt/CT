@@ -1705,7 +1705,7 @@ if (typeof MediaDatabase !== "undefined" || getURLVar("db") != "" || (EXECDB && 
 // Playlist options dropdown menu
 
 var html = '<button id="plsbtn" class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown" '
-	 + 'title="Playlist controls"><span class="glyphicon glyphicon-cog"></span>▼ </button>'
+	 + 'title="Playlist controls"><span class="glyphicon glyphicon-cog"></span>▾ </button>'
 	 + '<ul id="pls-menu" class="dropdown-menu dropdown-menu-right">'
 	 +   '<li><a id="pls-1"><span class="glyphicon glyphicon-cog nav-cog layout-cog"></span>'
 	 +     'Global Playback Options</a></li>'
@@ -1768,7 +1768,7 @@ $('<div id="plrbtn-outer" class="btn-group dropup" />').prependTo("#videocontrol
 
 if (!USEROPTS.wmode_transparent) {
 	$("#plrbtn-outer").removeClass('dropup');
-	document.getElementById("plr-btn").innerHTML = '<span class="glyphicon glyphicon-cog"></span> ▼';	
+	document.getElementById("plr-btn").innerHTML = '<span class="glyphicon glyphicon-cog"></span> ▾';	
 }
 if (FULLTITLE) $("#plr-5").addClass('activated');
 PROGRESSBAR ? showProgressBar() : $("#plr-6").addClass('activated');
