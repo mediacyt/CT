@@ -301,28 +301,17 @@ UnicodeLettersArray = [
 // Additional layout themes
 
 ThemesArray = [
-	['Cosmos',	'https://dl.dropboxusercontent.com/s/w75q2eqcj6p7cz4/cosmos.css'],
-	['DarkCells',	'https://dl.dropboxusercontent.com/s/d6esvco1v8iu7ir/darkcells.css'],
-	['Vichan',	'https://dl.dropboxusercontent.com/s/wpux079r6kfuk3k/vichan.css'],
-	['RedPlus',	'https://dl.dropboxusercontent.com/s/9y42udvkaky59a0/redplus.css'],
-	['Postmodern',	'https://dl.dropboxusercontent.com/s/9pp0l6x418mpch4/triangles.css'],
-	['Gray',	'https://dl.dropboxusercontent.com/s/5z8d9rsu8hobz55/grey.css'],
-	['Jungle',	'https://dl.dropboxusercontent.com/s/h5w9ecz1qu0ns7g/jungle.css'],
-	['Winter',	'https://dl.dropboxusercontent.com/s/i50wsa5ghh9oc0s/winter.css'],
-	['FreshAir',	'https://dl.dropboxusercontent.com/s/lq14vuztxvjxqz5/freshair.css'],
+	['1',	'https://dl.dropboxusercontent.com/s/w75q2eqcj6p7cz4/cosmos.css'],
+	['2',	'https://dl.dropboxusercontent.com/s/d6esvco1v8iu7ir/darkcells.css'],
+	['3',	'https://dl.dropboxusercontent.com/s/wpux079r6kfuk3k/vichan.css'],
+
 ];
 
 // Background pattern images
 
 BackgroundsArray = [
-	['Chequered',	'https://dl.dropboxusercontent.com/s/9su405d9ise5e3v/chequered.png'],
-	['Cosmos',	'https://dl.dropboxusercontent.com/s/qimrhicuocjutag/space.jpg'],
-	['Damask',	'https://dl.dropboxusercontent.com/s/8cl7edsnhh1ncun/damask.jpg'],
-	['Denim',	'https://dl.dropboxusercontent.com/s/li4q7xkxj75ev6v/denim.jpg'],
-	['Hibiscus',	'https://dl.dropboxusercontent.com/s/wd6wgisowlrxpfi/hibiscus.jpg'],
-	['Tiles',	'https://dl.dropboxusercontent.com/s/wsypfghvl8s39dz/checked.png'],
-	['Trangles',	'https://dl.dropboxusercontent.com/s/fptdsrtetoo7zoe/triangles.png'],
-	['Zigzag',	'https://dl.dropboxusercontent.com/s/pptzler9mnf6ake/zigzag.jpg'],
+	['1',	'https://dl.dropboxusercontent.com/s/9su405d9ise5e3v/chequered.png'],
+
 ];
 
 // Google fonts
