@@ -1,0 +1,44 @@
+#messagebuffer {
+    background-color: rgba(0,0,0,0);
+    background-image: url("https://varioglass.ca/wp-content/uploads/haze.png")!important;
+    background-size:  cover!important;
+}
+
+
+[class*="chat-msg"]:not(.drink):not(.consecutive):before,
+.poll-notify + [class*="chat-msg"].consecutive:before,
+.poll-notify:before {
+    content:"";
+    display:block;
+    width: calc(100% - 4px);
+    border-top: 1px solid #66AFE9;
+    opacity:0.3;
+    margin: auto;
+    margin-top:1px;
+    margin-bottom:2px;
+    padding-top: 1px;
+    padding-bottom: 2px;
+}
+
+[class*="chat-msg"].consecutive .timestamp {
+    display:none;
+}
+
+[class*="chat-msg"] {
+    position:relative;
+}
+
+[class*="chat-msg"] .timestamp {
+    position:absolute;
+    display:block;
+    padding-top: 1px;
+    margin-top: 1px;
+    top:0;
+    right:0;
+}
+
+#messagebuffer div.drink .timestamp {
+    font-size: 1.0em;
+    top:initial;
+    bottom:0;
+}
