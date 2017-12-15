@@ -1776,7 +1776,7 @@ $favsbtn = $('<button id="favs-btn" class="btn btn-sm btn-default" title="Add an
 // Chat colors button and menu
 
 var html = '<button id="colors-btn" type="button" class="btn btn-sm btn-default dropdown-toggle" '
-	 +   'data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Colors ○</button>'
+	 +   'data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Colors </button>'
 	 + '<ul id="colors-wrap" class="dropdown-menu centered"></ul>';
 $colorsmenu = $('<div id="colors-menu" class="btn-group dropup" />').appendTo("#leftcontrols").html(html);
 
