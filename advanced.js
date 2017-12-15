@@ -1563,6 +1563,7 @@ if (TRANSPARENTNAV) $nav.addClass('transparent');
 var html = '<li><a id="layout-1">Plus Options</a></li>'
 	 + '<li><a id="layout-2" class="opt"><span class="glyphicon glyphicon-ok"></span>Theme & User CSS</a></li>'
 	 + '<li class="divider"></li>'
+	 + '<li><a id="layout-3" class="opt"><span class="glyphicon glyphicon-ok"></span>Compact Layout</a></li>'
 	 + '<li><a id="layout-4" class="opt"><span class="glyphicon glyphicon-ok"></span>Single Column Layout</a></li>'
 	 + '<li><a id="layout-5" class="opt"><span class="glyphicon glyphicon-ok"></span>Flipped Layout</a></li>'
 	 + '<li><a id="layout-6" class="opt"><span class="glyphicon glyphicon-ok"></span>'
