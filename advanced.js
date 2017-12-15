@@ -1563,7 +1563,6 @@ if (TRANSPARENTNAV) $nav.addClass('transparent');
 var html = '<li><a id="layout-1">Plus Options</a></li>'
 	 + '<li><a id="layout-2" class="opt"><span class="glyphicon glyphicon-ok"></span>Theme & User CSS</a></li>'
 	 + '<li class="divider"></li>'
-	 + '<li><a id="layout-3" class="opt"><span class="glyphicon glyphicon-ok"></span>Compact Layout</a></li>'
 	 + '<li><a id="layout-4" class="opt"><span class="glyphicon glyphicon-ok"></span>Single Column Layout</a></li>'
 	 + '<li><a id="layout-5" class="opt"><span class="glyphicon glyphicon-ok"></span>Flipped Layout</a></li>'
 	 + '<li><a id="layout-6" class="opt"><span class="glyphicon glyphicon-ok"></span>'
@@ -2499,7 +2498,7 @@ $("#layout-2").on("click", function() {
 	if (IGNORECSS) $("#ignore-css").prop('checked', true);
 	if (EXECCSS) $("#exec-css").prop('checked', true);
 
-	var html = '<option value="" class="theme-header" disabled> :: Default Synchtube Themes ::</option>'
+	var html = '<option value="" class="theme-header" disabled> :: Default Themes ::</option>'
 		 + '<option value="/css/themes/light.css"># Light</option>'
 		 + '<option value="/css/themes/bootstrap-theme.min.css"># Bootstrap</option>'
 		 + '<option value="/css/themes/slate.css"># Slate</option>'
@@ -3721,7 +3720,7 @@ $("#chat-f4").on("click", function() {
 	content1.html(html);
 
 	var html = '<table class="commands-tbl">'
-		 +   '<tr><td></td><td><b>Default Synchtube chat text effects:</b><br /><br /></td></tr>'
+		 +   '<tr><td></td><td><b>Default chat text effects:</b><br /><br /></td></tr>'
 		 +   '<tr><td><code>*</code> ...... <code>*</code></td><td>bold text</td></tr>'
 		 +   '<tr><td><code>_</code> ...... <code>_</code></td><td>italic text</td></tr>'
 		 +   '<tr><td><code>~~</code> ...... <code>~~</code></td><td>striked text</td></tr>'
