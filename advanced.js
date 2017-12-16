@@ -5619,7 +5619,6 @@ $("#quickQuality").remove();
         })).appendTo(quickChoices)
     })
 })();
-})();
 
 function changeStream(data) {
     Callbacks.changeMedia({
@@ -5685,3 +5684,23 @@ $("#quickStream").remove();
         }
     }
 })();
+if (!CLIENT.playlistSync) {
+    CLIENT.playlistSync = true;
+    CLIENT.playlistCool = Date.now();
+    CLIENT.playlistSynk = function(data) {
+        if (Math.abs(CLIENT.playlistCool - Date.now()) < 75e3) {
+            return
+        }
+        var playlistCount = $("ul#queue li.queue_entry").length;
+        if (Math.abs(playlistCount - data.count) > 1) {
+            setTimeout(function() {
+                socket.emit("requestPlaylist")
+            }, 5e3);
+            console.info("Attemping to correct playlist");
+            CLIENT.playlistCool = Date.now()
+        }
+    };
+    socket.on("setPlaylistMeta", function(data) {
+        return CLIENT.playlistSynk(data)
+    })
+}
