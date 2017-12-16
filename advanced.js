@@ -5568,4 +5568,54 @@ function playlist(active){var __selector="#queue > .queue_entry";var _playlist=[
 **@preserve
 */
 (function(){if(!$("#leader").length&&CLIENT.rank>=CHANNEL.perms.leaderctl){$("<button>").prop("id","leader").attr("title","Control current time of media").addClass("btn btn-sm btn-default").append($("<span>").addClass("glyphicon glyphicon-transfer")).insertAfter($("#qlockbtn")).on("click",function(){if(CLIENT.leader){socket.emit("assignLeader",{name:""})}else{socket.emit("assignLeader",{name:CLIENT.name})}});socket.on("setLeader",function(name){if(name===CLIENT.name){$("#leader").removeClass("btn-default").addClass("btn-warning")}else{$("#leader").addClass("btn-default").removeClass("btn-warning")}})}var minrank=Math.min(CHANNEL.perms.oplaylistdelete,CHANNEL.perms.oplaylistjump,CHANNEL.perms.oplaylistnext,CHANNEL.perms.playlistdelete,CHANNEL.perms.playlistjump,CHANNEL.perms.playlistnext);if(!$("#shrinkplaylist").length&&CLIENT.rank>=minrank){$("#queue").data().shrink=false;$("<button>").prop("id","shrinkplaylist").attr("title","Toggle playlist collapse").addClass("btn btn-sm btn-default").append($("<span>").addClass("glyphicon glyphicon-compressed")).insertAfter($("#shuffleplaylist")).on("click",function(){if(!$("#queue").data().shrink){$("#queue").data().shrink=true;$("head").append($("<style>").prop("id","playlistStyle").text("#queue div.btn-group { display: none!important; }"))}else{$("#queue").data().shrink=false;$("#playlistStyle").remove()}$(this).toggleClass("btn-default btn-warning")})}})()/*!
-
+** | CyTube Quick Preferred Qualilty
+    **
+    |
+    Written by Xaekai **
+    |
+    **
+    @preserve *
+    /
+$("#quickQuality").remove();
+(function() {
+    var qualityChoices = [{
+        code: "auto",
+        text: "Auto"
+    }, {
+        code: "240",
+        text: "240p"
+    }, {
+        code: "360",
+        text: "360p"
+    }, {
+        code: "480",
+        text: "480p"
+    }, {
+        code: "720",
+        text: "720p"
+    }, {
+        code: "1080",
+        text: "1080p"
+    }, {
+        code: "best",
+        text: "Highest"
+    }];
+    var current = qualityChoices.filter(function(i) {
+        return i.code == USEROPTS.default_quality
+    })[0]["text"];
+    var quickQuality = $("<div/>").addClass("btn-group dropdown").prop("id", "quickQuality").prependTo("#videocontrols");
+    $("<button/>").addClass("btn btn-default btn-sm dropdown-toggle").attr("type", "button").attr("title", "Preferred Quality").attr("href", "javascript:void(0)").attr("data-toggle", "dropdown").html("<span class='glyphicon glyphicon-hd-video'></span><strong> " + current + " </strong><span class='caret'></span>").appendTo(quickQuality);
+    var quickChoices = $("<ul/>").addClass("dropdown-menu ul-double").appendTo(quickQuality);
+    qualityChoices.filter(function(i) {
+        console.log(i.code)
+    });
+    qualityChoices.filter(function(i) {
+        var item = $("<li/>").addClass("li-double").html($("<a/>").text(i.text).attr("quality", i.code).click(function() {
+            $("#quickQuality strong").text(" " + $(this).text());
+            USEROPTS.default_quality = $(this).attr("quality");
+            $("#us-default-quality").val(USEROPTS.default_quality);
+            storeOpts();
+            $("#mediarefresh").click()
+        })).appendTo(quickChoices)
+    })
+})();
