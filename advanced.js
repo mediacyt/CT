@@ -5619,3 +5619,69 @@ $("#quickQuality").remove();
         })).appendTo(quickChoices)
     })
 })();
+})();
+
+function changeStream(data) {
+    Callbacks.changeMedia({
+        currentTime: 0,
+        duration: "--:--",
+        id: data.id,
+        meta: {
+            embed: {
+                src: String().concat("http://www.ustream.tv/embed/", data.id, "?v=3&wmode=direct&autoplay=1"),
+                tag: "iframe"
+            }
+        },
+        paused: false,
+        seconds: 0,
+        title: String().concat("Ustream.tv - channel/", data.name),
+        type: "us"
+    })
+}
+$("#quickStream").remove();
+(function() {
+    var streamChoices = [{
+        id: "16558159",
+        name: "woeful-streaming"
+    }, {
+        id: "20308283",
+        name: "ponyspazz"
+    }, {
+        id: "13392289",
+        name: "the-brony-network"
+    }, {
+        id: "20768037",
+        name: "btvnumanother"
+    }];
+    var quickStream = $("<div/>").addClass("btn-group dropdown").prop("id", "quickStream").prependTo("#videocontrols").hide();
+    $("<button/>").addClass("btn btn-default btn-sm dropdown-toggle").attr("type", "button").attr("title", "Stream Select").attr("href", "javascript:void(0)").attr("data-toggle", "dropdown").html("<strong> Pony Stream </strong><span class='caret'></span>").appendTo(quickStream);
+    var quickChoices = $("<ul/>").addClass("dropdown-menu ul-double").appendTo(quickStream);
+    streamChoices.filter(function(i) {
+        var item = $("<li/>").addClass("li-double").html($("<a/>").text(i.name).data("streamid", i.id).data("streamname", i.name).click(function() {
+            changeStream({
+                id: $(this).data("streamid"),
+                name: $(this).data("streamname")
+            })
+        })).appendTo(quickChoices)
+    });
+    if (!window.ponystreamlistener) {
+        window.ponystreamlistener = true;
+        socket.on("changeMedia", function(data) {
+            if (data.type == "us" && data.id.match(/13392289|16558159|20308283|20768037/)) {
+                $("#quickStream").show();
+                $("#quickQuality").hide()
+            } else {
+                $("#quickStream").hide();
+                $("#quickQuality").show()
+            }
+        });
+        var initialVid = playlist(true)["media"];
+        if (initialVid.type == "us" && data.id.match(/13392289|16558159|20308283|20768037/)) {
+            $("#quickStream").show();
+            $("#quickQuality").hide()
+        } else {
+            $("#quickStream").hide();
+            $("#quickQuality").show()
+        }
+    }
+})();
