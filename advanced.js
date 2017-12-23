@@ -124,7 +124,7 @@ CHATUSERNAME	= getOrDefault('SP_chatusername',	false);
 COLLAPSEMOTD	= getOrDefault('SP_collapsemotd',	false);
 COLLAPSEULIST	= getOrDefault('SP_collapseulist',	false);
 CUSTOMDBURL	= getOrDefault('SP_customdburl',	'');
-CUSTOMFILTERS	= getOrDefault('SP_customfilters',	'synchtube > Synchtube');
+CUSTOMFILTERS	= getOrDefault('SP_customfilters',	'mediasync > Mediasync');
 CUSTOMHTML	= getOrDefault('SP_customhtml',		'');
 ELEMENTS	= getOrDefault('SP_elements',		_ELEMENTS);
 EMOTESPERPAGE	= getOrDefault('SP_emotesperpage',	100);
@@ -2514,7 +2514,7 @@ $("#layout-2").on("click", function() {
 		 + '<option value="/css/themes/cyborg.css"># Cyborg</option>'
 		 + '<option value="/css/themes/modern.css"># Modern</option>';
 	if (ThemesArray.length > 0) {
-		html += '<option value="" class="theme-header" disabled> :: Synchtube Premium Themes ::</option>';
+		html += '<option value="" class="theme-header" disabled> :: Mediasync Plus Themes ::</option>';
 		for (i in ThemesArray) {
 			html += '<option value="' + ThemesArray[i][1] + '"># ' + ThemesArray[i][0] + '</option>';
 		}
@@ -3253,7 +3253,7 @@ $("#tools-btn").on("click", function() {
 	     + '(not at the end of file - database will not load).';
 	content4.html(html);
 
-	html = '<strong>Synchtube Premium customization</strong><br /><br />'
+	html = '<strong>Mediasync Plus customization</strong><br /><br />'
 	     + 'It is possible to customize on your channel some basic Premium options.<br /><br />'
 	     + '1. Open code file and go to <code>BASIC CUSTOMIZATION</code> section.<br />'
 	     + '2. Change selected variables according to your wishes.<br />'
@@ -5529,7 +5529,7 @@ if (FaviconURL != "") {
 
 LOADED = true;
 var time = Math.round(new Date().getTime() - START) / 1000;
-addServerMessage('Mediasync Advanced v. ' + VERSION + ' activated (in ' + time + ' s.)');
+addServerMessage('Mediasync Plus v. ' + VERSION + ' activated (in ' + time + ' s.)');
 
 
 // Admin message
