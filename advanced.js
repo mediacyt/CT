@@ -2,7 +2,7 @@
 
 -Mediasync Plus Â© 2016-2017 by MM
 
-Version:		2.4.3
+Version:		1.0
 Release date:		2017-12-05
 -License:		Creative Commons CC-BY-NC-SA 4.0		
 -License URL:		http://creativecommons.org/licenses/by-nc-sa/4.0/
@@ -162,7 +162,7 @@ ONLINETIME 	= 0;
 PLAYERTEXT	= false;
 PREVTIME	= 0;
 SPEAKLINK	= 'http://webanywhere.cs.washington.edu/cgi-bin/espeak/getsound.pl';
-VERSION		= '2.4.3';
+VERSION		= '1.0';
 VISIBLETAB	= {"options":1, "commands":1, "tools":1}
 
 
