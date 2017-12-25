@@ -311,10 +311,8 @@ UnicodeEmojiArray = [
 // Additional layout themes
 
 ThemesArray = [
-	['1',	'https://dl.dropboxusercontent.com/s/w75q2eqcj6p7cz4/cosmos.css'],
-	['2',	'https://dl.dropboxusercontent.com/s/d6esvco1v8iu7ir/darkcells.css'],
-	['3',	'https://dl.dropboxusercontent.com/s/wpux079r6kfuk3k/vichan.css'],
-
+	['1',	''],
+	
 ];
 
 // Background pattern images
